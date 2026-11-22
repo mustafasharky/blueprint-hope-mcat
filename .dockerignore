@@ -1,0 +1,14 @@
+.git
+.venv
+.codex
+.agents
+.aws
+private
+**/__pycache__
+*.sqlite*
+.env*
+credentials*.json
+token*.json
+client_secret*.json
+cookies*.json
+*.har

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "synthetic-entry-001",
+    "text": "Synthetic example: I was unsure whether a comparison supports a causal claim.",
+    "occurred_at": "2026-10-22",
+    "timestamp_precision": "day",
+    "reason": "confused",
+    "target": {"section": "BB", "concept": "Causal inference", "skill": "Experimental design"}
+  }
+]

@@ -1,0 +1,13 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements-companion.txt ./
+RUN pip install --no-cache-dir -r requirements-companion.txt \
+    && useradd --create-home companion \
+    && mkdir /data && chown companion:companion /data
+COPY companion/ ./companion/
+COPY study_sync.py blueprint_report.py ./
+USER companion
+ENV COMPANION_DATABASE=/data/companion.sqlite
+EXPOSE 8000
+VOLUME ["/data"]
+CMD ["python", "-m", "companion.mcp_server", "--transport", "streamable-http", "--host", "0.0.0.0"]
